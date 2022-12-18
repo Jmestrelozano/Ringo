@@ -1,3 +1,5 @@
+import { TypeStatus } from "../../global/global";
+
 export interface Pets {
   id: number;
   name: string;
@@ -8,5 +10,9 @@ export interface Pets {
 }
 
 export interface StatePetsSlice {
-  pets: Pets[];
+  pets: {
+    data: Pets[];
+    msg: string;
+  };
+  status: TypeStatus;
 }

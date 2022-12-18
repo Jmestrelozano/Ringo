@@ -1,9 +1,12 @@
 import React, { useEffect } from "react";
 import { getPetService } from "../../../data/petsServices/getPetServices";
+import { useAppDispatch } from "../../../domain/store/store";
 
 const HomeScreen = () => {
+  const dispatch = useAppDispatch();
+
   useEffect(() => {
-    console.log(getPetService());
+    dispatch(getPetService());
   }, []);
   return <div>HomeScreen</div>;
 };

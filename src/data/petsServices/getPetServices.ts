@@ -1,17 +1,20 @@
 import axios from "axios";
-import pets from "../json/pets.json";
+import { Dispatch } from "@reduxjs/toolkit";
+import { ATTEMPT_PETS, FAILURE_PETS, SUCCESS_PETS } from "../../domain/store/slices/petsSlice";
 
-export const getPetService = async () => {
+export const getPetService = () => async (dispatch: Dispatch) => {
+  dispatch(ATTEMPT_PETS());
   try {
     const response = await axios.get("http://127.0.0.1:5173/src/data/json/pets.json");
 
     const result = response.data;
     if (response.status !== 200) {
-      console.log("error");
+      dispatch(FAILURE_PETS("Fallo en la conexion"));
     }
 
-    console.log(result);
-  } catch (error) {
-    console.log(error);
+    dispatch(SUCCESS_PETS(result));
+  } catch (error: any) {
+    dispatch(FAILURE_PETS(error));
+    throw error;
   }
 };
