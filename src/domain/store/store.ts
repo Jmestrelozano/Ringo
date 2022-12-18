@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { CurriedGetDefaultMiddleware } from "@reduxjs/toolkit/dist/getDefaultMiddleware";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
+import { AppStore } from "../interfaces/store/storeInterface";
 import { petsSlice } from "./slices/petsSlice";
 
-export const store = configureStore({
+export const store = configureStore<AppStore, any, any>({
   reducer: { pets: petsSlice.reducer },
   middleware: (getDefaultMiddleware: CurriedGetDefaultMiddleware) =>
     getDefaultMiddleware({

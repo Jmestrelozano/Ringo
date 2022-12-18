@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { TypeStatus } from "../../interfaces/global/global";
-import { Pets, StatePetsSlice } from "../../interfaces/slices/petsSlice/petSlice";
+import { Pets, StatePetsSlice } from "../../interfaces/slices/petsSlice/petSliceInterface";
 
 const initialState: StatePetsSlice = {
   pets: {

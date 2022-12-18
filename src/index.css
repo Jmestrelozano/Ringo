@@ -1,3 +1,17 @@
+:root {
+  --rose: #ff595a;
+}
+@font-face {
+  font-family: "VAGRoundedBold";
+  src: local("VAGRoundedBold"),
+    url("./presentation/assets/fonts/VAG_Rounded_Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VAGRoundedLight";
+  src: local("VAGRoundedLight"),
+    url("./presentation/assets/fonts/VAG_Rounded_Light.ttf") format("truetype");
+}
 * {
   margin: 0;
   padding: 0;

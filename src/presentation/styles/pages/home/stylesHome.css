@@ -1,0 +1,44 @@
+.container {
+  padding: 0 3rem 0 3rem;
+}
+
+.container_advertisement {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding-top: 5rem;
+  margin: 0 auto;
+}
+
+.container_advertisement .title_advertisement {
+  text-align: center;
+  font-family: "VagRoundedBold";
+  color: var(--rose);
+  font-size: 3rem;
+}
+
+.container_advertisement .text_desc_advertisement {
+  margin-top: 1rem;
+  font-family: "VAGRoundedLight";
+  text-align: center;
+}
+
+.container_pets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 425px) {
+  .container_advertisement {
+    margin: 0;
+    width: 100%;
+  }
+
+  .container_advertisement .title_advertisement {
+    font-size: 1.2rem;
+  }
+}

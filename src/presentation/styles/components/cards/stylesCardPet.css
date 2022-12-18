@@ -1,0 +1,58 @@
+.card_pet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 280px;
+}
+
+.card_pet .container_img_pet {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+.card_pet .container_img_pet img {
+  width: 166px;
+  height: auto;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+}
+
+.card_pet .title_pet {
+  background: #1d7789;
+  color: #fff;
+  width: 60%;
+  margin: 0 auto;
+  padding: 5px;
+  font-family: "VagRoundedBold";
+  border-radius: 10px;
+  margin: 5% auto;
+  text-align: center;
+}
+/* .card_pet .container_img_pet ::before {
+  content: "";
+  background: url("https://www.ringo.com.co/Portals/ringo/Campanias/Cachorros/dog-before.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 236px;
+  height: 166px;
+  position: absolute;
+  right: 0;
+  left: -6px;
+  margin: 0 auto;
+}
+
+.card_pet .container_img_pet::after {
+  content: "";
+  background: url("https://www.ringo.com.co/Portals/ringo/Campanias/Cachorros/dog-after.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 229px;
+  height: 152px;
+  position: absolute;
+  right: 0;
+  left: -6px;
+  margin: 0 auto;
+  z-index: -1;
+} */
