@@ -14,7 +14,7 @@ Next, use React to create an app that displays the kittens from the API. You can
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Jmestrelozano/Ringo.git
 ```
 
 Go to the project directory
@@ -44,7 +44,3 @@ Start the server
 ![App Screenshot](mode_tablet.png)
 
 ![App Screenshot](mode_details.png)
-
-## Demo
-
-Insert gif or link to demo
