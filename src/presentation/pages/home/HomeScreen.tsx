@@ -1,4 +1,3 @@
-import { is } from "immer/dist/internal";
 import React, { useEffect, useState } from "react";
 import { getPetService } from "../../../data/petsServices/getPetServices";
 import { AppStore } from "../../../domain/interfaces/store/storeInterface";
