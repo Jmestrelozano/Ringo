@@ -1,0 +1,131 @@
+body {
+  color: #333333;
+  font-family: "Helvetica", arial;
+  height: 1500px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+p {
+  margin-bottom: 20px;
+}
+
+.btn_close {
+  color: #aaaaaa;
+  font-size: 30px;
+  text-decoration: none;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.btn_close:hover {
+  color: #919191;
+}
+
+.modal_pet:before {
+  content: "";
+  display: block;
+  background: rgba(70, 68, 68, 0.089);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.modal_pet .modal_dialog_pet {
+  background: #fefefe;
+  border: #333333 solid 1px;
+  border-radius: 5px;
+  margin-left: -200px;
+  position: fixed;
+  left: 50%;
+  z-index: 11;
+  width: 360px;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  transform: translate(0, 0);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  top: 11%;
+}
+
+.modal_body_pet {
+  padding: 20px;
+}
+.modal_header_pet {
+  height: 2rem;
+  padding: 10px 20px;
+}
+.modal_header_pet {
+  border-bottom: #eeeeee solid 1px;
+}
+.modal_header_pet h2 {
+  font-size: 20px;
+}
+
+.title_modal_pet {
+  background-color: #950c13;
+  border-radius: 13px;
+  color: #ffffff;
+  font-family: "VAGRoundedBold";
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  margin: 26.8281px 50.3125px 30.1719px;
+  padding: 4px;
+  text-align: center;
+}
+
+.container_img_modal_pet {
+  display: flex;
+  justify-content: center;
+  width: 10rem;
+  height: 10rem;
+  margin: 0 auto;
+}
+.container_img_modal_pet img {
+  border-radius: 100%;
+}
+
+.modal_pet .modal_dialog_pet .modal_body_pet .modal_info_pet {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal_pet .modal_dialog_pet .modal_body_pet .modal_info_pet .modal_row_pet {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal_pet .modal_dialog_pet .modal_body_pet .modal_info_pet .modal_row_pet h4 {
+  color: var(--rose);
+  font-family: "VAGRoundedBold";
+}
+
+.modal_pet .modal_dialog_pet .modal_body_pet .modal_info_pet .modal_row_pet p {
+  font-family: "VAGRoundedLight";
+}
+
+.modal_pet .modal_dialog_pet .modal_body_pet .modal_info_pet .modal_description_pet {
+  height: 7rem;
+  overflow-y: scroll;
+  font-family: "VAGRoundedLight";
+}
+
+@media (max-width: 425px) {
+  .modal_pet .modal_dialog_pet {
+    left: 0;
+    width: 92%;
+    margin: 0 1rem 0 1rem;
+  }
+}

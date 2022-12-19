@@ -30,6 +30,19 @@
   margin: 5% auto;
   text-align: center;
 }
+
+.card_pet .ref_pet {
+  background-image: url("https://www.ringo.com.co/Portals/ringo/Campanias/Cachorros/btn-bajar.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  background-color: transparent;
+}
 /* .card_pet .container_img_pet ::before {
   content: "";
   background: url("https://www.ringo.com.co/Portals/ringo/Campanias/Cachorros/dog-before.svg");
