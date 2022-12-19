@@ -43,6 +43,8 @@ Start the server
 
 ![App Screenshot](mode_tablet.png)
 
+![App Screenshot](mode_details.png)
+
 ## Demo
 
 Insert gif or link to demo
