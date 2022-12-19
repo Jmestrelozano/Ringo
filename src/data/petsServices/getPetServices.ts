@@ -7,8 +7,17 @@ export const getPetService = () => async (dispatch: Dispatch) => {
   dispatch(ATTEMPT_PETS());
   try {
     const url = `${BaseURL}/src/data/json/pets.json`;
-    console.log(BaseURL);
-    const response = await axios.get(url);
+    const response = await axios.get(url, {
+      withCredentials: false,
+
+      headers: {
+        "Access-Control-Allow-Credentials": true,
+        "Access-Control-Allow-Origin": "*",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers":
+          "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version",
+      },
+    });
 
     const result = response.data;
     if (response.status !== 200) {
