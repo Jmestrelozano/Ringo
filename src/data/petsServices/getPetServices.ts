@@ -7,6 +7,7 @@ export const getPetService = () => async (dispatch: Dispatch) => {
   dispatch(ATTEMPT_PETS());
   try {
     const url = `${BaseURL}/src/data/json/pets.json`;
+    console.log(BaseURL);
     const response = await axios.get(url);
 
     const result = response.data;
