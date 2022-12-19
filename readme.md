@@ -44,3 +44,11 @@ Start the server
 ![App Screenshot](mode_tablet.png)
 
 ![App Screenshot](mode_details.png)
+
+## Port
+
+port this project run
+
+```bash
+  http://localhost:5173
+```
