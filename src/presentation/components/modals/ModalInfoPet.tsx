@@ -1,6 +1,5 @@
 import React from "react";
 import { Pets } from "../../../domain/interfaces/slices/petsSlice/petSliceInterface";
-import { BaseURL } from "../../global/global";
 import "../../styles/modals/stylesModalInfoPet.css";
 
 interface Props {
@@ -10,7 +9,7 @@ interface Props {
 }
 export const ModalInfoPet = ({ isModal, action, data }: Props) => {
   const { name, age, gender, description, imageFileName } = data[0];
-  const urlImg = `${BaseURL}/src/presentation/assets/images/${imageFileName}`;
+
   return (
     <>
       {isModal && (
@@ -25,7 +24,7 @@ export const ModalInfoPet = ({ isModal, action, data }: Props) => {
               <h3 className="title_modal_pet">{name}</h3>
 
               <div className="container_img_modal_pet">
-                <img src={urlImg} />
+                <img src={imageFileName} />
               </div>
 
               <div className="modal_info_pet">
