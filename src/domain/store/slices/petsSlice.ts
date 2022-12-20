@@ -18,6 +18,7 @@ export const petsSlice = createSlice({
     },
     SUCCESS_PETS: (state, action: PayloadAction<Pets[]>) => {
       state.pets.data = action.payload;
+      state.status = TypeStatus.SUCCESS;
     },
     FAILURE_PETS: (state, action: PayloadAction<string>) => {
       state.pets.data = [];

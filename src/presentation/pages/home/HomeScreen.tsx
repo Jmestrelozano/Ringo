@@ -1,9 +1,11 @@
 import { is } from "immer/dist/internal";
 import React, { useEffect, useState } from "react";
 import { getPetService } from "../../../data/petsServices/getPetServices";
+import { TypeStatus } from "../../../domain/interfaces/global/global";
 import { AppStore } from "../../../domain/interfaces/store/storeInterface";
 import { useAppDispatch, useAppSelector } from "../../../domain/store/store";
 import { CardPet } from "../../components/cards/CardPet";
+import { LoadingPet } from "../../components/loaders/LoadingPet";
 import { ModalInfoPet } from "../../components/modals/ModalInfoPet";
 import { NavBar } from "../../components/navbar/NavBar";
 import "../../styles/pages/home/stylesHome.css";
@@ -24,15 +26,15 @@ const HomeScreen = () => {
 
   const dataPetUnique = dataPets.filter((pet) => pet.id === idPet);
   return (
-    <div>
+    <div style={{ height: "100vh" }}>
       <NavBar />
 
       <div className="container">
         <div className="container_advertisement">
           <h2 className="title_advertisement">
-            Adopta un cachorro
+            Adopta un felino
             <br />
-            #DesdeCachorroHastaSiempre
+            #DesdeFelinoHastaSiempre
           </h2>
           <p className="text_desc_advertisement">
             Al adoptar a un felino tu vida se transforma, tu tono de voz y tus espacios cambian, ya
@@ -42,12 +44,15 @@ const HomeScreen = () => {
           </p>
           <br />
         </div>
-
-        <div className="container_pets">
-          {dataPets.map((pet) => {
-            return <CardPet pet={pet} action={handleModal} setIdPet={setIdPet} />;
-          })}
-        </div>
+        {status === TypeStatus.LOADING ? (
+          <LoadingPet />
+        ) : (
+          <div className="container_pets">
+            {dataPets.map((pet) => {
+              return <CardPet pet={pet} action={handleModal} setIdPet={setIdPet} />;
+            })}
+          </div>
+        )}
       </div>
 
       {isModal && <ModalInfoPet action={handleModal} data={dataPetUnique} isModal={isModal} />}
