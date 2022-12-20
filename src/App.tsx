@@ -4,6 +4,7 @@ import { store } from "./domain/store/store";
 import HomeScreen from "./presentation/pages/home/HomeScreen";
 
 const App = () => {
+  console.log(import.meta.env);
   return (
     <Provider store={store}>
       <HomeScreen />
